@@ -1,0 +1,87 @@
+<div class="row">
+	<div class="col">
+		<div widget class="card">
+			<div class="card-header">
+				<span>System Log</span>
+			</div>
+						
+			<div class="card-block widget-body">
+				<div *ngIf="validate" class="row col-md-6">
+						<div class="form-group">
+									<div *ngIf="validate" class="alert alert-danger alert-dismissible fade show" role="alert">
+										<span>{{ errorMessage }}</span>
+									</div>
+				
+						</div>
+				</div>
+				<div class="row  mypad pull-right">
+						<div class="mypad form-group">
+							<label for="startDate"> Start Date:</label> <input type="date" class="my-control" [(ngModel)]="strstdate" id="startdate" name="startdate" required>
+						</div>
+
+						<div class="form-group mypad">
+							<label for="endDate"> End Date:</label> <input type="date" class="my-control"  [(ngModel)]="strenddate" name="endDate" id="endDate" required>
+						</div>
+
+						<div class="form-group mypad">
+								<button type="button"  class="btn btn-sm btn-default pointer" (click)="getresult()"><i class="fa fa-search fa-lg"></i> &nbsp;Search</button>
+						</div>
+				</div>
+				<div class="table-responsive datatable">
+					<table class="table table-striped table-hover table-sm" [mfData]="logs" #mf="mfDataTable"
+					[mfRowsOnPage]="rowsOnPage" [(mfSortBy)]="sortBy" [(mfSortOrder)]="sortOrder">
+					<thead>
+						<tr>
+							<th style="width:80%"><mfDefaultSorter by="message">Message</mfDefaultSorter></th>
+							<th style="padding-left:10px!important"><mfDefaultSorter by="createdDate">Created Date</mfDefaultSorter></th>
+						</tr>
+					</thead>
+					<tbody>                           
+						<tr *ngFor="let item of (mf.data)">
+							<td class="tableMsg"><a href="javascript:void(0);" (click)= "showMsg(item.Message)">{{item.Message}}</a></td>
+							<td style="padding-left:10px!important">{{item.CreatedDate | date:'medium'}}</td>
+						</tr>
+						<tr>
+							<td colspan="2" *ngIf="!IsData">
+								No Record  Found
+							</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td colspan="12">
+								<mfBootstrapPaginator [rowsOnPageSet]="[10, 25, 50, 100]"></mfBootstrapPaginator>
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>       
+
+		</div>
+		
+	</div>
+</div>
+</div>
+<div class="modal col-sm-6 offset-sm-3" id="message-modal" tabindex="-1" role="dialog" aria-labelledby="modal-primary-label">
+	<div class="message-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header state modal-primary themeColorOverite">                                    
+			<h4 class="modal-title" id="modal-primary-label"><i class="fa fa-envelope-o"> Message</i>
+				</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+			</div>
+			<div class="modal-body text-left">
+				<span>{{messageforModal}}</span>
+			</div>
+			<div class="text-center">
+				<div class="form-group">
+					<button type="button" class="btn btn-default pointer" data-dismiss="modal" (click) = "hideMsg()">OK</button>
+				</div></div>
+			</div>
+		</div>
+	</div>
+
+	<div [hidden]="!progressVisible"  class="loading text-center" style="width:100%; padding-left:21%;padding-right:4%" >
+	<i class='fa fa-spinner fa-5x fa-spin'></i><br/><br/>
+	<strong>Processing ....</strong>
+</div> 

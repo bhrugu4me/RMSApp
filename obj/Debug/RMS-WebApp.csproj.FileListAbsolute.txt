@@ -1,0 +1,6 @@
+D:\Just Energy\Rewards Management System\RewardsManagementSystem\obj\Debug\RMS-WebApp.csprojResolveAssemblyReference.cache
+D:\Just Energy\Rewards Management System\RewardsManagementSystem\bin\RMS-WebApp.dll.config
+D:\Just Energy\Rewards Management System\RewardsManagementSystem\bin\RMS-WebApp.dll
+D:\Just Energy\Rewards Management System\RewardsManagementSystem\bin\RMS-WebApp.pdb
+D:\Just Energy\Rewards Management System\RewardsManagementSystem\obj\Debug\RMS-WebApp.dll
+D:\Just Energy\Rewards Management System\RewardsManagementSystem\obj\Debug\RMS-WebApp.pdb

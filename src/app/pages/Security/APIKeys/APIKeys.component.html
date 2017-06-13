@@ -1,0 +1,168 @@
+	<div class="row bottom-30" *ngIf="roleList">
+		<div class="col">
+			<div widget class="card tableMinHeight">
+				<div class="card-header">
+					<span>API Keys</span>       
+				</div>
+		<!-- 		<div class="card-block widget-body">
+				<div *ngIf="!this.requiredVariable.isAdding">
+					<div class="row">
+						<div class="col">
+							<div class="w-200 pull-left bottom-15">
+								<button type="button" class="btn btn-sm btn-secondary pointer" (click) = "this.requiredVariable.isAdding=true"><i class="fa fa-plus fa-lg"></i> &nbsp;Add Role</button>
+							</div>
+						</div>
+						<div class="col">
+							<div  class="text-center alert alert-success alert-dismissible fade show customPaddingAlert" role="alert" *ngIf="this.requiredVariable.isShowing">
+								{{this.requiredVariable.message}}
+							</div>
+						</div>
+						<div class="col">
+							<div class="w-200 pull-right bottom-15">
+								<div class="input-group input-group-sm">
+									<span class="input-group-addon"><i class="fa fa-search"></i></span>
+									<input class="form-control" id="table-search-input" [(ngModel)]="searchText" type="text" placeholder="Search User Name" (keypress)="eventHandler($event)">
+								</div>
+							</div>  
+
+						</div>
+					</div>
+						<div *ngIf="validateerr" class="alert alert-danger alert-dismissible fade show" role="alert">
+							{{ this.errorMessage }}
+						</div>
+				
+					<div class="table-responsive datatable">
+						<table class="table table-striped table-hover table-sm" [mfData]="roleList | SearchPipe : searchText" #mf="mfDataTable"
+						[mfRowsOnPage]="this.dataTableObj.rowsOnPage" [(mfSortBy)]="this.dataTableObj.sortBy" [(mfSortOrder)]="this.dataTableObj.sortOrder">
+						<thead>
+							<tr>
+								<th><mfDefaultSorter by="UserName">User Name</mfDefaultSorter></th>
+								<th><mfDefaultSorter by="Role">Role</mfDefaultSorter></th>
+								<th><mfDefaultSorter by="CreatedBy">Created By</mfDefaultSorter></th>
+								<th><mfDefaultSorter by="ModifiedBy">Modified By</mfDefaultSorter></th>
+								<th><mfDefaultSorter by="CreatedDate">Created Date</mfDefaultSorter></th>
+								<th><mfDefaultSorter>Edit</mfDefaultSorter></th>
+							</tr>
+						</thead>
+						<tbody>                           
+							<tr *ngFor="let item of mf.data">
+								<td><a href="javascript:void(0);">{{item.UserName}}</a></td>
+								<td>{{item.RoleName}}</td>
+								<td>{{item.CreatedByUserName}}</td>
+								<td>{{item.LastModifiedByUserName}}</td>
+								<td>{{item.CreatedDate | date:'medium'}}</td>
+								<td><i class="fa fa-pencil-square-o userRoleIcon" data-toggle="modal" data-target="#edit-modal" (click)="editbtnClick(item)"></i>
+								</td>
+							</tr>
+
+						</tbody>
+						<tfoot>
+							<tr>
+								<td colspan="12">
+									<mfBootstrapPaginator [rowsOnPageSet]="[10, 25, 50, 100]"></mfBootstrapPaginator>
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+				</div>
+				<div class="card-block widget-body col-md-6 col-12 offset-md-3 addRoleBox" *ngIf="this.requiredVariable.isAdding">
+				<form class="form" name="addrole">
+					<div *ngIf="validate" class="alert alert-danger alert-dismissible fade show" role="alert">
+							{{ this.AuthMessage }}
+						</div>
+						
+					<div class="form-group" [formGroup]="addrole">
+						<label for="email-b-f">User Name</label>
+						<input type="text" class="form-control checking-field" placeholder="Enter a email..."   (blur)="checkuser()"
+						[(ngModel)]="this.addRoleModal.UserName" formControlName="addEmail" required />
+						<span class="help-block text-danger" *ngIf="addrole.get('addEmail').touched && addrole.get('addEmail').hasError('required')">Email is required</span>                              
+						<span class="help-block text-danger" *ngIf="addrole.get('addEmail').touched && addrole.get('addEmail').hasError('invalidEmail')">Invalid email address</span>
+					</div>
+					<div class="form-group"  >
+						<label for="email-b-f">First Name</label>
+						<input type="text" class="form-control checking-field" name="firstname" [(ngModel)]="this.addRoleModal.FirstName" [disabled]=true/>
+					</div>
+					<div class="form-group" >
+						<label for="email-b-f">Last Name</label>
+						<input type="text" class="form-control checking-field" name="lastname" [(ngModel)]="this.addRoleModal.LastName" [disabled]="true"/>
+					</div>
+					<div class="form-group">
+						<label for="exampleSelect1">Role</label>
+						<select class="form-control" id="exampleSelect1"   [(ngModel)]="this.addRoleModal.RoleID" name="role">
+							<option *ngFor="let item of this.roldeData" value="{{item.RoleId}}">{{item.RoleName}}</option>
+						</select>
+					</div>
+
+					<div class="form-group text-center">
+						<button class="btn btn-primary pointer" type="submit" [disabled]="!addrole.valid" (click)="saveButtonClick(addrole)">Save</button>
+						<button class="btn btn-secondary pointer" type="button" (click)="resetForm()">Cancel</button>
+					</div>
+
+				</form>
+			</div>
+
+			</div> -->
+
+		</div>
+	</div>
+</div>
+
+<!-- <div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="modal-primary-label">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header state modal-primary themeColorOverite">                                    
+				<h4 class="modal-title" id="modal-primary-label"><i class="fa fa-trash-o"> Delete Role</i></h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+			</div>
+			<div class="modal-body text-center">
+				<STRONG>Are you sure want to delete?</STRONG>
+			</div>
+			<div class="deleteModal">
+				<div class="form-group">
+					<button type="button" class="btn btn-main pointer" data-dismiss="modal" (click)="deleteRole()">Delete</button>
+					<button type="button" class="btn btn-default pointer" data-dismiss="modal">Cancel</button>
+				</div></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="modal-primary-label">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header state modal-primary themeColorOverite">                                    
+					<h4 class="modal-title" id="modal-primary-label"><i class="fa fa-pencil-square-o"> Update Role</i></h4>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				</div>
+				<div class="modal-body">
+					<form  class="form" name="editrole">
+						<div class="form-group" [formGroup]="editrole">
+							<label for="email-b-f">UserName</label>
+							<input type="text" class="form-control checking-field" placeholder="Enter a email..."
+							[(ngModel)]="this.editRoleModal.UserName" formControlName="editEmail" readonly/>
+							<span class="help-block text-danger" *ngIf="editrole.get('editEmail').touched && editrole.get('editEmail').hasError('required')">Email is required</span>                              
+							<span class="help-block text-danger" *ngIf="editrole.get('editEmail').touched && editrole.get('editEmail').hasError('invalidEmail')">Invalid email address</span>
+						</div>
+						<div class="form-group">
+							<label for="exampleSelect1">Role</label>
+							<select class="form-control" id="exampleSelect1"   [(ngModel)]="this.editRoleModal.RoleID" name="useType">
+							<option *ngFor="let item of this.roldeData" value="{{item.RoleId}}">{{item.RoleName}}</option>
+				 			</select>
+						</div>
+
+						<div class="form-group text-center">
+							<button class="btn btn-main pointer" type="button" [disabled]="!editrole.valid" (click)="saveButtonClick(editrole)" data-dismiss="modal">Update</button>
+							<button class="btn btn-secondary pointer" type="button" (click)="resetForm()" data-dismiss="modal">Cancel</button>
+						</div>
+
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+<div [hidden]="!progressVisible"  class="loading text-center" style="width:100%; padding-left:21%;padding-right:4%" >
+	<i class='fa fa-spinner fa-5x fa-spin'></i><br/><br/>
+	<strong>Processing ....</strong>
+</div>  -->

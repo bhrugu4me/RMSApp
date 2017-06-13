@@ -1,0 +1,115 @@
+.table td,th{
+  font-size :12px; 
+  font-weight :300;
+  color:black;
+}
+.table a{
+  color:black;
+}
+.card-header span{
+  color:white;
+}
+.modal-header h4{
+  color:white;
+}
+
+.alignoverride
+{
+  text-align: right !important;
+  float:right!important;
+ 
+}
+
+.loading {
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: show;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* Transparent Overlay */
+.loading:before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+}
+
+
+
+//pagination colors:
+.page-item.active .page-link {
+    background-color: #83d145 !important;
+    border-color: #83d145 !important;
+}
+
+.table td,th{
+  font-size :12px; 
+  font-weight :300;
+  color:black;
+}
+.table a{
+  color:black;
+}
+.themeColorOverite{
+  background-color:#83d145 !important;
+  border-color:#83d145 !important;
+}
+
+.errortheme
+{
+    background-color: #bf1725!important;
+    border-color:  #bf1725!important;
+}
+
+$pointer-roleTable:pointer;
+.pointer{
+    cursor:$pointer-roleTable;
+}
+.pagination{
+  float: left;
+}
+.tableMinHeight{
+  min-height : 510px;
+}
+.my-control {
+    height: 30px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.mypad
+{
+    padding-right: 15px!important;
+}
+
+.w-260
+{
+    width: 260px!important;
+}
+
+.w-150
+{
+    width: 150px !important;
+}

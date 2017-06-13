@@ -1,0 +1,137 @@
+@import "../../theme/styles/variables";
+
+.login-container{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    .card{
+        padding: 15px;
+        .btn-link{
+            padding: 0;
+            &.forgot{
+                font-size: 14px;
+            }
+            &:hover{
+                color: $main-color;
+            }
+        }
+       
+    }
+}
+
+.login-align
+{
+    padding-left:10px!important; 
+    //padding-top:10% !important;    
+    float: left;
+    display: inline-table;
+}
+.auth-sep {
+  margin-top: 30px;
+  margin-bottom: 24px;
+  line-height: 20px;
+  font-size: 15px;
+  text-align: center;
+  display: block;
+  position: relative;
+  & > span {
+    display: table-cell;
+    width: 30%;
+    white-space: nowrap;
+    padding: 0 14px;
+    color: $gray;
+    & > span {
+      margin-top: -11px;
+      display: block;
+      font-weight: 300;
+    }
+  }
+  &:before, &:after {
+    border-top: solid 1px $gray-light;
+    content: "";
+    height: 1px;
+    width: 35%;
+    display: table-cell;
+  }
+}
+
+.login-help{
+    margin: 0;
+    padding: 0;
+    li{
+        list-style: none;
+        display: inline-block;
+        margin-left: 10px;
+        &:first-child {
+            margin-left:0;
+        }
+        i{
+            cursor: pointer;
+            transition: all 0.1s ease;
+            color: #fff;
+            padding: 9px 9px 6px 9px;
+            font-size: 12px;
+            background-color: $main-color;
+            &.socicon-facebook{
+                background-color: $facebook-color;
+            }
+            &.socicon-twitter{
+                background-color: $twitter-color;
+            }
+            &.socicon-google{
+                background-color: $google-color;
+            }
+            &:hover{                         
+                opacity: 0.9;     
+            }
+        }
+    }
+}
+
+.responsive-image {
+        max-width: 100%;
+        max-height: 640px !important;
+        width: 100%;
+}
+.login-align {
+  background: rgba(255, 255, 255, 255) url("~/assets/img/feed/main-side-img.jpg") no-repeat scroll 0 0 / 75% auto;
+  display: inline-table;
+  float: left;
+  height: 100%;
+  left: 0;
+  max-width: 100%;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+}
+.login-align > div {
+  cursor: pointer;
+  float: right;
+  padding-top: 15%;
+  width: 25%;
+  align-content: center;
+}
+
+@media (min-width:767px) and (max-width:1025px) {
+.login-align > div {
+  cursor: pointer;
+  float: right;
+  padding-top: 20%;
+  width: 25%;
+  align-content: center;
+}
+
+}
+@media (max-width:767px) {
+.login-align > div {
+    cursor: pointer;
+    float: right;
+    padding-top:360px;
+    width: 100%;
+}
+.login-align {
+  background: rgba(255, 255, 255, 255) url("~/assets/img/feed/main-side-img.jpg") no-repeat scroll 0 0 / 100% 350px;
+}
+}

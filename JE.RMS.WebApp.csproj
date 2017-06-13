@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{709024CF-7AD5-4316-893B-14F8CAF372AF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>2.2</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="karma.conf.js" />
+    <Content Include="protractor.conf.js" />
+    <Content Include="src\app\pages\blank\blank.component.html" />
+    <Content Include="src\app\pages\Customers\Customers.component.html" />
+    <Content Include="src\app\pages\login\login.component.html" />
+    <Content Include="src\app\pages\NoAccess\NoAccess.component.html" />
+    <Content Include="src\app\pages\pages.component.html" />
+    <Content Include="src\app\pages\Products\Products.component.html" />
+    <Content Include="src\app\pages\Rewards\Rewards.component.html" />
+    <Content Include="src\app\pages\Security\APIKeys\APIKeys.component.html" />
+    <Content Include="src\app\pages\Security\UserManagement\UserManagement.component.html" />
+    <Content Include="src\app\pages\SystemLog\systemLog.component.html" />
+    <Content Include="src\app\pages\TransactionWorkbench\TransactionWorkbench.component.html" />
+    <Content Include="src\app\services\secret.service.ts.template" />
+    <Content Include="src\app\theme\components\breadcrumb\breadcrumb.component.html" />
+    <Content Include="src\app\theme\components\menu\menu.component.html" />
+    <Content Include="src\app\theme\components\messages\messages.component.html" />
+    <Content Include="src\app\theme\components\navbar\navbar.component.html" />
+    <Content Include="src\assets\img\app\no-image.png" />
+    <Content Include="src\assets\img\app\sample.jpg" />
+    <Content Include="src\assets\img\app\sky-full.jpg" />
+    <Content Include="src\assets\img\app\sky.jpg" />
+    <Content Include="src\assets\img\app\snow.jpg" />
+    <Content Include="src\assets\img\comments.svg" />
+    <Content Include="src\assets\img\feed\feed-image.svg" />
+    <Content Include="src\assets\img\feed\feed-location.svg" />
+    <Content Include="src\assets\img\feed\feed-video.svg" />
+    <Content Include="src\assets\img\feed\my-little-kitten.png" />
+    <Content Include="src\assets\img\feed\new-york-location.jpg" />
+    <Content Include="src\assets\img\feed\protein.png" />
+    <Content Include="src\assets\img\feed\vader-and-me-preview.jpg" />
+    <Content Include="src\assets\img\logo\az_logo.png" />
+    <Content Include="src\assets\img\logo\az_logo_full.png" />
+    <Content Include="src\assets\img\logo\cube-1.jpg" />
+    <Content Include="src\assets\img\logo\cube-2.jpg" />
+    <Content Include="src\assets\img\logo\cube-3.jpg" />
+    <Content Include="src\assets\img\logo\cube-4.jpg" />
+    <Content Include="src\assets\img\logo\cube-5.jpg" />
+    <Content Include="src\assets\img\logo\cube-6.jpg" />
+    <Content Include="src\assets\img\logo\cube-7.jpg" />
+    <Content Include="src\assets\img\logo\cube-8.jpg" />
+    <Content Include="src\assets\img\logo\cube-9.jpg" />
+    <Content Include="src\assets\img\profile\adam.jpg" />
+    <Content Include="src\assets\img\profile\ashley.jpg" />
+    <Content Include="src\assets\img\profile\bruno.jpg" />
+    <Content Include="src\assets\img\profile\julia.jpg" />
+    <Content Include="src\assets\img\profile\michael.jpg" />
+    <Content Include="src\assets\img\profile\tereza.jpg" />
+    <Content Include="src\assets\img\shopping-cart.svg" />
+    <Content Include="src\assets\img\users\user.jpg" />
+    <Content Include="src\assets\img\vendor\leaflet\marker-icon-2x.png" />
+    <Content Include="src\assets\img\vendor\leaflet\marker-icon.png" />
+    <Content Include="src\assets\img\vendor\leaflet\marker-shadow.png" />
+    <Content Include="src\favicon.ico" />
+    <Content Include="src\index.html" />
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".angular-cli.json" />
+    <Content Include=".editorconfig" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="src\app\app.component.scss" />
+    <Content Include="src\app\pages\blank\blank.component.scss" />
+    <Content Include="src\app\pages\pages.component.scss" />
+    <Content Include="src\app\theme\components\back-top\back-top.component.scss" />
+    <Content Include="src\app\theme\components\breadcrumb\breadcrumb.component.scss" />
+    <Content Include="src\app\theme\components\menu\menu.component.scss" />
+    <Content Include="src\app\theme\components\messages\messages.component.scss" />
+    <Content Include="src\app\theme\components\navbar\navbar.component.scss" />
+    <Content Include="src\app\theme\styles\skins\_black.scss" />
+    <Content Include="src\app\theme\styles\skins\_blue.scss" />
+    <Content Include="src\app\theme\styles\skins\_green.scss" />
+    <Content Include="src\app\theme\styles\skins\_purple.scss" />
+    <Content Include="src\app\theme\styles\skins\_red.scss" />
+    <Content Include="src\app\theme\styles\_base.scss" />
+    <Content Include="src\app\theme\styles\_bootstrap-override.scss" />
+    <Content Include="src\app\theme\styles\_libs-override.scss" />
+    <Content Include="src\app\theme\styles\_mixins.scss" />
+    <Content Include="src\app\theme\styles\_variables.scss" />
+    <Content Include="src\styles.scss" />
+    <Content Include="src\tsconfig.app.json" />
+    <Content Include="src\tsconfig.spec.json" />
+    <Content Include="tsconfig.json" />
+    <Content Include="tslint.json" />
+    <Content Include="e2e\tsconfig.e2e.json" />
+    <Content Include="src\app\pages\Customers\Customers.component.scss" />
+    <Content Include="src\app\pages\login\login.component.scss" />
+    <Content Include="src\app\pages\NoAccess\NoAccess.component.scss" />
+    <Content Include="src\app\pages\Products\Products.component.scss" />
+    <Content Include="src\app\pages\Rewards\Rewards.component.scss" />
+    <Content Include="src\app\pages\Security\APIKeys\APIKeys.component.scss" />
+    <Content Include="src\app\pages\Security\UserManagement\UserManagement.component.scss" />
+    <Content Include="src\app\pages\SystemLog\systemLog.component.scss" />
+    <Content Include="src\app\pages\TransactionWorkbench\TransactionWorkbench.component.scss" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="e2e\app.e2e-spec.ts" />
+    <TypeScriptCompile Include="e2e\app.po.ts" />
+    <TypeScriptCompile Include="src\app\app.color.ts" />
+    <TypeScriptCompile Include="src\app\app.component.ts" />
+    <TypeScriptCompile Include="src\app\app.config.ts" />
+    <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\app.routing.ts" />
+    <TypeScriptCompile Include="src\app\app.state.ts" />
+    <TypeScriptCompile Include="src\app\pages\blank\blank.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\Customers\Customers.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\login\login.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\login\login.module.ts" />
+    <TypeScriptCompile Include="src\app\pages\NoAccess\NoAccess.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\pages.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\pages.module.ts" />
+    <TypeScriptCompile Include="src\app\pages\pages.routing.ts" />
+    <TypeScriptCompile Include="src\app\pages\Products\Products.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\Rewards\Rewards.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\Security\APIKeys\APIKeys.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\Security\UserManagement\UserManagement.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\SystemLog\systemLog.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\TransactionWorkbench\TransactionWorkbench.component.ts" />
+    <TypeScriptCompile Include="src\app\services\Alerts.service.ts" />
+    <TypeScriptCompile Include="src\app\services\TransactionWorkbench.service.ts" />
+    <TypeScriptCompile Include="src\app\services\SystemLog.service.ts" />
+    <TypeScriptCompile Include="src\app\services\APIKeys.service.ts" />
+    <TypeScriptCompile Include="src\app\services\Products.service.ts" />
+    <TypeScriptCompile Include="src\app\services\Customers.service.ts" />
+    <TypeScriptCompile Include="src\app\services\Rewards.service.ts" />
+    <TypeScriptCompile Include="src\app\services\UserRole.service.ts" />
+    <TypeScriptCompile Include="src\app\services\Validation.interface.ts" />
+    <TypeScriptCompile Include="src\app\shared\Customers.ts" />
+    <TypeScriptCompile Include="src\app\shared\FulfillmentRules.ts" />
+    <TypeScriptCompile Include="src\app\shared\Products.ts" />
+    <TypeScriptCompile Include="src\app\shared\UserManagement.ts" />
+    <TypeScriptCompile Include="src\app\shared\APIKeys.ts" />
+    <TypeScriptCompile Include="src\app\shared\SystemLog.ts" />
+    <TypeScriptCompile Include="src\app\shared\TransactionWorkbench.ts" />
+    <TypeScriptCompile Include="src\app\shared\Rewards.ts" />
+    <TypeScriptCompile Include="src\app\shared\Validation.interface.ts" />
+    <TypeScriptCompile Include="src\app\theme\components\back-top\back-top.component.ts" />
+    <TypeScriptCompile Include="src\app\theme\components\breadcrumb\breadcrumb.component.ts" />
+    <TypeScriptCompile Include="src\app\theme\components\menu\menu.component.ts" />
+    <TypeScriptCompile Include="src\app\theme\components\menu\menu.service.ts" />
+    <TypeScriptCompile Include="src\app\theme\components\menu\menu.ts" />
+    <TypeScriptCompile Include="src\app\theme\components\messages\messages.component.ts" />
+    <TypeScriptCompile Include="src\app\theme\components\messages\messages.service.ts" />
+    <TypeScriptCompile Include="src\app\theme\components\navbar\navbar.component.ts" />
+    <TypeScriptCompile Include="src\app\theme\directives\counter\counter.directive.ts" />
+    <TypeScriptCompile Include="src\app\theme\directives\directives.module.ts" />
+    <TypeScriptCompile Include="src\app\theme\directives\dropzone\dropzone.directive.ts" />
+    <TypeScriptCompile Include="src\app\theme\directives\live-tile\live-tile.directive.ts" />
+    <TypeScriptCompile Include="src\app\theme\directives\progress-animate\progress-animate.directive.ts" />
+    <TypeScriptCompile Include="src\app\theme\directives\skycon\skycon.directive.ts" />
+    <TypeScriptCompile Include="src\app\theme\directives\slim-scroll\slim-scroll.directive.ts" />
+    <TypeScriptCompile Include="src\app\theme\directives\widget\widget.directive.ts" />
+    <TypeScriptCompile Include="src\app\theme\pipes\appPicture\appPicture.pipe.ts" />
+    <TypeScriptCompile Include="src\app\theme\pipes\pipes.module.ts" />
+    <TypeScriptCompile Include="src\app\theme\pipes\profilePicture\profilePicture.pipe.ts" />
+    <TypeScriptCompile Include="src\app\theme\pipes\search\mail-search.pipe.ts" />
+    <TypeScriptCompile Include="src\app\theme\pipes\search\search.pipe.ts" />
+    <TypeScriptCompile Include="src\environments\environment.prod.ts" />
+    <TypeScriptCompile Include="src\environments\environment.ts" />
+    <TypeScriptCompile Include="src\main.ts" />
+    <TypeScriptCompile Include="src\polyfills.ts" />
+    <TypeScriptCompile Include="src\test.ts" />
+    <TypeScriptCompile Include="src\typings.d.ts" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>RewardsManagementSystem</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56265</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56265/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+</Project>

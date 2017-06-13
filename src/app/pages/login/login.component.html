@@ -1,0 +1,24 @@
+
+<div  style="background: white">
+    <div class="row">
+        <div class="col-md-9">
+            <img class="responsive-image" src="assets/img/feed/main-side-img.jpg" />
+        </div>
+        <div class="align-middle text-center col-md-3 login-align" >
+            <div  style="cursor: pointer">
+                <div class="text-center" (click)="logIn()">
+                    <img src="assets/img/logo/az_logo.png" alt="" ><br/>
+                    <br/><h6><strong>Rewards Management System</strong></h6><br/>
+                    <button  class="btn btn-primary btn-sm" style="padding:0.5rem 2rem">Log in</button>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+  
+</div>
+
+<div [hidden]="!progressVisible" class="loading text-center" style="width:100%; padding-left:21%;padding-right:4%">
+					<i class='fa fa-spinner fa-5x fa-spin'></i><br />
+					<strong>Processing...</strong>
+				</div>

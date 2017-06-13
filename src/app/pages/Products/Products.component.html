@@ -1,0 +1,115 @@
+<div class="row">
+	<div class="col">
+		<div widget class="card">
+			<div class="card-header">
+				<span>{{this.requiredVariable.title}}</span>
+			</div>
+
+			<div class="card-block widget-body">
+				<div>
+					<div class="row" *ngIf="!this.requiredVariable.isFullfillment">
+						<div class="col">
+							<div class="w-200 pull-right bottom-15">
+								<div class="input-group input-group-sm">
+									<span class="input-group-addon"><i class="fa fa-search"></i></span>
+									<input class="form-control" id="table-search-input" [(ngModel)]="searchText" type="text" placeholder="Search Product Name"
+									>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div [hidden]="!progressVisible" class="loading text-center" style="width:100%; padding-left:21%;padding-right:4%">
+						<i class='fa fa-spinner fa-5x fa-spin'></i><br />
+						<strong>Processing...</strong>
+					</div>
+					<div *ngIf="IsSuccess" class="text-center alert alert-success alert-dismissible fade show customPaddingAlert" role="alert">
+						{{this.SuccessMessage}}
+					</div>
+
+					<div class="table-responsive datatable" *ngIf="!this.requiredVariable.isFullfillment">
+						<table class="table table-striped table-hover table-sm" [mfData]="data | SearchPipe : searchText" #mf="mfDataTable" [mfRowsOnPage]="rowsOnPage" [(mfSortBy)]="sortBy"
+						[(mfSortOrder)]="sortOrder">
+						<thead>
+							<tr>
+								<th>
+									<mfDefaultSorter by="ProductCode">Product Code</mfDefaultSorter>
+								</th>
+								<th>
+									<mfDefaultSorter by="ProductName">Product Name</mfDefaultSorter>
+								</th>
+								<th>
+									<mfDefaultSorter>Fullfillment Channel</mfDefaultSorter>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr *ngFor="let item of mf.data">
+								<td class="fontoverride">{{ item.ProductCode }}</td>
+								<td>{{ item.ProductName }}</td>
+								<td><i class="fa fa-exchange editIcon" data-toggle="modal" data-target="#Fullfillment-modal"></i>
+								</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td colspan="9">
+									<mfBootstrapPaginator [rowsOnPageSet]="[10, 25, 50, 100]"></mfBootstrapPaginator>
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+
+				</div>
+		</div>
+
+	</div>
+</div>
+</div>
+</div>
+
+<div class="modal fade" id="Fullfillment-modal" tabindex="-1" role="dialog" aria-labelledby="modal-primary-label">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header state modal-primary themeColorOverite">                                    
+				<h4 class="modal-title" id="modal-primary-label"><i class="fa fa-lock"> Fullfillment Channel</i></h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+			</div>
+			<div class="modal-body">
+				<div class="table-responsive datatable">
+						<table class="table table-striped table-hover table-sm" [mfData]="fullfillmentData" #mf="mfDataTable" [mfRowsOnPage]="rowsOnPage" [(mfSortBy)]="sortBy"
+						[(mfSortOrder)]="sortOrder">
+						<thead>
+							<tr>
+								<th>
+									<mfDefaultSorter by="ProductCode">Channel Id</mfDefaultSorter>
+								</th>
+								<th>
+									<mfDefaultSorter by="ProductName">Channel Name</mfDefaultSorter>
+								</th>
+								<th>
+									<mfDefaultSorter>Date</mfDefaultSorter>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr *ngFor="let item of mf.data">
+								<td class="fontoverride">{{ item.channelId }}</td>
+								<td>{{ item.channelName }}</td>
+								<td>{{item.date | date:'medium'}}</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td colspan="9">
+									<mfBootstrapPaginator [rowsOnPageSet]="[10, 25, 50, 100]"></mfBootstrapPaginator>
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+
+				</div>
+			</div>
+		</div>
+	</div>
+

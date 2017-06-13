@@ -1,0 +1,195 @@
+.file-upload{
+		.file-upload-btn{
+				position: absolute;
+				width: 100%;
+				height: 35px;
+				z-index: 9;
+				opacity: 0;
+		}
+		.delete-file{
+				position: absolute;
+				right: 50px;
+				top: 8px;
+				font-size: 16px;
+				opacity: .8;
+				cursor: pointer;
+				z-index: 99;
+				visibility: hidden;
+		}
+		&:hover .delete-file{
+				visibility: visible;
+		}
+}
+
+
+.uploaded {
+		padding: 0;
+		height: 14px;
+		border-radius: 10px;
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#66cc00), to(#4b9500));
+		border-image: initial;
+}
+
+		/* Absolute Center Spinner */
+.loading {
+	position: fixed;
+	z-index: 999;
+	height: 2em;
+	width: 2em;
+	overflow: show;
+	margin: auto;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+/* Transparent Overlay */
+.loading:before {
+	content: '';
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+}
+
+.progress
+{
+		background-color: gray !important;
+}
+
+.table td,th{
+	font-size :12px; 
+	font-weight :300;
+	color:black;
+}
+.table a{
+	color:black;
+}
+.themeColorOverite{
+	background-color:#83d145 !important;
+	border-color:#83d145 !important;
+}
+
+.errortheme
+{
+		background-color: #bf1725!important;
+		border-color:  #bf1725!important;
+}
+.card-header span{
+	color:white;
+}
+.modal-header h4{
+	color:white;
+}
+.addRoleBox {
+		border: 1px solid #ddd;
+		box-shadow: 6px 7px 6px #888888;
+}
+
+$pointer-roleTable:pointer;
+.pointer{
+		cursor:$pointer-roleTable;
+}
+.pagination{
+	float: left;
+}
+.tableMinHeight{
+	min-height : 510px;
+}
+.customPaddingAlert{
+	padding:0.10rem 1.25rem!important;
+}
+.fontoverride
+{
+		font-weight: normal !important;
+		cursor: pointer !important;
+}
+
+.fontsizeoverride
+{
+		font-size: 11px !important;
+}
+//pagination colors:
+.page-item.active .page-link {
+		background-color: #83d145 !important;
+		border-color: #83d145 !important;
+}
+.table td,th{
+	font-size :12px; 
+	font-weight :300;
+	color:black;
+}
+.table a{
+	color:black;
+}
+.card-header span{
+	color:white;
+}
+.modal-header h4{
+	color:white;
+}
+
+.childgrid
+{
+		padding-top: 18px !important;
+}
+form
+{
+		padding-top: 8px !important;
+}
+
+.my-control {
+		height: 30px;
+		padding: 6px 12px;
+		font-size: 14px;
+		line-height: 1.42857143;
+		color: #555;
+		background-color: #fff;
+		background-image: none;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+		box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+		-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+		-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+		transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.mypad
+{
+		padding-left: 15px!important;
+}
+
+.w-260
+{
+		width: 260px!important;
+}
+
+.w-150
+{
+		width: 150px !important;
+}
+
+.text-green
+{
+		color:green !important;
+}
+.btn-search{
+	line-height: 0 !important;
+	cursor:pointer !important;
+    border-radius: 5px;
+}
+.advance_search{
+	border: 1px solid #ddd;
+    box-shadow: 3px 3px 3px #888888;
+    margin-bottom:30px;
+}
+
+.custom-dropdown .dropdown-menu {
+	height: 150px !important;
+    overflow-y: scroll !important;
+}
